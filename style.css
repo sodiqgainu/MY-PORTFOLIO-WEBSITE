@@ -1,0 +1,780 @@
+html{scroll-behavior: smooth;}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+.nav{
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+    padding:10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    align-items: center;
+    background-color: rgb(16, 16, 39);
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    position: fixed;
+    z-index: 1;
+}
+
+.nav h1{
+    font-size: 40px;
+    color:White;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.menu {
+  padding: 10px;  
+  display : flex;
+  gap:20px;
+    align-items: center;
+    z-index: 1;
+}
+
+.menu ul{
+    display:flex;
+   
+    list-style: none;
+    gap: 60px;
+}
+
+.menu a{
+    color:white;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.menu a:hover{
+    transition: all 0.2s;
+   box-shadow: 0 -5px 0px #fff inset,
+   500px 0 0 rgba(255, 255, 255, 0.03) inset;
+    padding:15px;
+}
+
+
+
+.home{
+    
+   padding: 20px;
+   padding-top: 40px;
+   display: flex;
+   align-items: center;
+line-height:4.2em;
+gap:50px;
+background-color:rgb(12, 12, 32);
+}
+
+.hero{
+   
+    padding:20px;
+    max-width:60%;
+}
+
+.hero h2{
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 30px;
+    color:rgb(195, 213, 230);
+}
+.hero h1{
+    font-size: 60px;
+    color:whitesmoke;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.button{
+  
+    padding:20px;
+    display: block;
+    width:30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.button button{
+    padding:7px 15px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    background-color:rgb(241, 37, 71);
+    color:white;
+    border: none;
+    border-radius: 5px;
+}
+
+.button button a{
+    color:white;
+}
+
+.button button:hover{
+    background-color:rgb(184, 8, 37) ;
+    transition:all 0.5s ease-out;
+    cursor:pointer;
+}
+.image{
+   
+    max-width:40%;
+   margin-top: 76px;
+}
+.image img{
+    width:70%;
+}
+
+/* Hamburger styles */
+
+.hamburger{
+    position: relative;
+    width:30px;
+    height:4px;
+    background: #fff;
+    border-radius: 10px;
+    cursor:pointer;
+    z-index:2;
+    transition:all 0.3s ease-out;
+}
+
+.hamburger:before,.hamburger:after{
+    content: "";
+    position:absolute;
+    height:4px;
+    right:0;
+    background-color: #fff;
+    border-radius: 10px;
+    transition:all 0.3s ease-out;
+}
+
+.hamburger:before{
+    top: -10px;
+    width:20px
+}
+
+.hamburger:after{
+    top: 10px;
+    width: 25px;
+}
+
+.toggle-menu{
+position: absolute;
+width:30px;
+height:100%;
+z-index:3;
+cursor: pointer;
+opacity: 0;
+}
+
+.hamburger, .toggle-menu{
+    display: none;
+}
+
+.menu input:checked ~ .hamburger{
+   background: transparent;
+}
+
+.menu input:checked ~ .hamburger:before{
+ top:0;
+ transform: rotate(-45deg);
+ width:30px;
+}
+
+.menu input:checked ~ .hamburger:after{
+    top:0;
+    transform: rotate(45deg);
+    width:30px; 
+}
+
+.menu input:checked ~ ul{
+  right:0
+}
+
+/* end of hamnburger styles */
+@media (max-width:992px){ 
+    .hero h2{
+        font-size: 19px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-top: 30px;
+        color:rgb(195, 213, 230);
+    }
+    .hero h1{
+        font-size: 30px;
+        margin-top: 20px;
+        color:whitesmoke;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+
+    .home{
+    
+   padding: 90px, 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+line-height:4.2em;
+gap:50px;
+background-color:rgb(12, 12, 32);
+}
+
+.hero{
+  
+    padding:20px;
+    max-width:100%;
+    text-align: center;
+}
+.image{
+    
+    max-width:100%;
+   margin-top: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.image img{
+    width: 70%;
+
+}
+.button{
+  
+    padding:20px;
+    display: block;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.button button{
+    padding:7px 15px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    background-color:rgb(241, 37, 71);
+    color:white;
+    border: none;
+    border-radius: 5px;
+}
+
+.button button:hover{
+    background-color:rgb(184, 8, 37) ;
+    transition:all 0.5s ease-out;
+    cursor:pointer;
+}
+
+.nav h1{
+    font-size: 25px;
+}
+
+}
+
+@media (max-width:992px) {
+    .hamburger,
+    .toggle-menu{
+        display: block;
+    }
+    .menu ul{
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top:0;
+        right:-300px;
+        background-color: rgb(93, 93, 116);
+        width:300px;
+        height:100%;
+        padding-top: 65px;
+        transition: all 0.3s ease-in-out;
+    }
+
+     .menu ul li{
+       width:100%;
+       padding: 10px 0;
+    }
+    .menu ul li a{
+        display: block;
+        width:100%;
+        box-sizing: border-box;
+        padding-left: 20px;
+        font-size: 24px;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    }
+}
+
+
+/* About styles */
+
+.about{
+    background-color: rgb(16, 16, 39);
+    padding:30px
+}
+.about .title{
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 30px;
+    color:rgb(241, 37, 71);
+    text-align: center;
+    margin-bottom: 90px;
+}
+
+.about .content{
+    font-size: 19px;
+    line-height: 2.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 30px;
+    color:rgb(195, 213, 230);
+    text-align: center;
+}
+.about .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+}
+.about button{
+    padding:7px 15px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    background-color:rgb(241, 37, 71);
+    color:white;
+    border: none;
+    border-radius: 5px;
+    
+}
+.about .button a{
+    color:White;
+}
+
+
+/* SKILLS styles */
+
+
+.skill{
+   background-color:rgb(12, 12, 32);
+    padding:40px;
+}
+
+.skill .title{
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 30px;
+    color:rgb(241, 37, 71);
+    text-align: center;
+    margin-bottom: 90px;
+}
+
+.skill .skill-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 80px;
+    margin: 0px auto;
+    background-color: rgb(16, 16, 39);
+    gap:30px;
+}
+
+.box{
+    background-color:rgb(12, 12, 32);
+    padding: 50px;
+    border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+
+}
+.box:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+.box h2{
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 30px;
+    color:rgb(195, 213, 230);
+    text-align: center;
+    margin-bottom: 30px;
+}
+.box ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:rgb(195, 213, 230);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.box ul li{
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:rgb(195, 213, 230);
+    text-align: center;
+    margin-bottom: 30px;
+    
+}
+
+.box ul li:hover{
+    color:rgb(241, 37, 71);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+@media (max-width:992px) {
+    .skill .skill-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .skill .skill-container.box{
+        width: 100%;
+        padding: 30px;
+    }
+    .skill .skill-container.box h2{
+        font-size: 20px;
+    }
+    .skill .skill-container.box ul li{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .skill .skill-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .skill .skill-container.box{
+        width: 100%;
+        padding: 30px;
+    }
+    .skill .skill-container.box h2{
+        font-size: 20px;
+    }
+    .skill .skill-container.box ul li{
+        font-size: 18px;
+    }
+}
+
+
+/* projects styles */
+
+.project{
+    background-color:rgb(16, 16, 39);
+    padding:40px;
+}
+
+.project-set{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 80px;
+    margin: 0px auto;
+    background-color: rgb(12, 12, 32);
+    gap:30px;
+}
+
+.project .title{
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 30px;
+    color:rgb(241, 37, 71);
+    text-align: center;
+    margin-bottom: 90px;
+}
+
+.project .boxes{
+    background-color:rgb(16, 16, 39);;
+    padding: 50px;
+    border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+
+}
+
+.project .boxes:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.project .boxes h2{
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 30px;
+    color:rgb(195, 213, 230);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.project .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.project .button button{
+    padding:7px 15px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    background-color:rgb(241, 37, 71);
+    color:white;
+    border: none;
+    border-radius: 5px;
+    
+}
+
+.project .boxes p{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:rgb(195, 213, 230);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+@media (max-width:992px) {
+    .project-set{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .project .boxes{
+        width: 100%;
+        padding: 30px;
+    }
+    .project .boxes h2{
+        font-size: 20px;
+    }
+    .project .boxes p{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-set{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .project .boxes{
+        width: 100%;
+        padding: 30px;
+    }
+    .project .boxes h2{
+        font-size: 20px;
+    }
+    .project .boxes p{
+        font-size: 18px;
+    }
+}
+
+
+/* contact styles */
+
+
+.contact{
+    background-color:rgb(12, 12, 32);
+    padding:40px;
+}
+
+.contact .title{
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 30px;
+    color:rgb(241, 37, 71);
+    text-align: center;
+    margin-bottom: 90px;
+}
+
+.contact .contact-form{
+    background-color:rgb(16, 16, 39);;
+    padding: 50px;
+    border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.contact .contact-form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.contact .contact-form form input{
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5px;
+    border: 1px solid rgb(195, 213, 230);
+    background-color: rgb(12, 12, 32);
+    color:rgb(195, 213, 230);
+    outline: none;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.contact .contact-form form input:focus{
+    border: 1px solid rgb(241, 37, 71);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    color:rgb(195, 213, 250);
+    outline: none;
+}
+.contact .contact-form form textarea{
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5px;
+    border: 1px solid rgb(195, 213, 230);
+    background-color: rgb(12, 12, 32);
+    color:rgb(195, 213, 230);
+    outline: none;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+    resize: none;
+    height: 200px;
+    width: 100%;
+    padding: 10px;
+}
+
+.contact .contact-form form textarea:focus{
+    border: 1px solid rgb(241, 37, 71);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    color:rgb(195, 213, 250);
+    outline: none;
+}
+
+.contact .contact-form form button{
+    padding:7px 15px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    background-color:rgb(241, 37, 71);
+    color:white;
+    border: none;
+    border-radius: 5px;
+    
+}
+
+.contact .contact-form form button:hover{
+    background-color:rgb(12, 12, 32);
+    color:rgb(241, 37, 71);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    outline: none;
+    cursor: pointer;
+    border: 1px solid rgb(241, 37, 71);
+    border-radius: 5px;
+    color:rgb(195, 213, 250);
+    outline: none;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.contact p{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:rgb(195, 213, 230);
+    text-align: center;
+    margin-bottom: 30px;
+}
+.contact p a{
+   background-color:rgb(241, 37, 71) ;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid rgb(241, 37, 71);
+    border-radius: 5px;
+    color:rgb(195, 213, 250);
+
+}
+
+.contact p a:hover{
+    color:rgb(241, 37, 71);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    outline: none;
+    cursor: pointer;
+    border: 1px solid rgb(241, 37, 71);
+    border-radius: 5px;
+    color:rgb(195, 213, 250);
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width:992px) {
+    .contact .contact-form{
+        padding: 30px;
+    }
+    .contact .contact-form form input{
+        font-size: 18px;
+    }
+    .contact .contact-form form textarea{
+        font-size: 18px;
+    }
+    .contact .contact-form form button{
+        font-size: 18px;
+    }
+    .contact p{
+        font-size: 18px;
+    }
+    .contact p a{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact .contact-form{
+        padding: 30px;
+    }
+    .contact .contact-form form input{
+        font-size: 18px;
+    }
+    .contact .contact-form form textarea{
+        font-size: 18px;
+    }
+    .contact .contact-form form button{
+        font-size: 18px;
+    }
+    .contact p{
+        font-size: 18px;
+    }
+    .contact p a{
+        font-size: 18px;
+    }
+}
